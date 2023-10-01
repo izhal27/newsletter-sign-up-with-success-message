@@ -1,12 +1,18 @@
+'use client'
+
+import { useState } from "react";
 import Image from "next/image";
 import checkIcon from '../public/icons/icon-list.svg';
 
 export default function Home() {
-  return (
-    <main className="flex flex-col h-screen">
+  const [submitedStatus, setSubmitedStatus] = useState(true);
+
+  const FormComponent = () => (
+    <>
       <section>
-        <div className="">
+        <div>
           <Image
+            className="sm:hidden"
             src={"/images/illustration-sign-up-mobile.svg"}
             alt="Illustration Image"
             width={0}
@@ -51,6 +57,35 @@ export default function Home() {
           </form>
         </div>
       </section>
+    </>
+  );
+
+  const SuccessComponent = () => (
+    <>
+      <section className="flex flex-col h-screen px-5 text-dark-slate-grey">
+        <div className="flex flex-col mt-48 gap-7">
+          <Image
+            className="sm:hidden"
+            src={"/icons/icon-success.svg"}
+            alt="Illustration Image"
+            width={60}
+            height={60}
+          />
+          <h1 className="text-4xl font-bold">Thanks for subscribing!</h1>
+          <p>A confirmation email has been sent to <span className="font-bold">ash@loremcompany.com.</span>{" "}
+            Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button
+          className="px-5 py-4 font-bold text-center text-white rounded-lg mt-60 bg-dark-slate-grey"
+          type="submit"
+          onClick={() => setSubmitedStatus(false)}>Dismiss message</button>
+      </section>
+    </>
+  )
+
+  return (
+    <main className="flex flex-col h-screen">
+      {submitedStatus ? <SuccessComponent /> : <FormComponent />}
     </main>
   )
 }
