@@ -62,21 +62,23 @@ export default function Home() {
 
   const SuccessComponent = () => (
     <>
-      <section className="flex flex-col h-screen px-5 text-dark-slate-grey">
-        <div className="flex flex-col mt-48 gap-7">
-          <Image
-            className="sm:hidden"
-            src={"/icons/icon-success.svg"}
-            alt="Illustration Image"
-            width={60}
-            height={60}
-          />
-          <h1 className="text-4xl font-bold">Thanks for subscribing!</h1>
-          <p>A confirmation email has been sent to <span className="font-bold">ash@loremcompany.com.</span>{" "}
-            Please open it and click the button inside to confirm your subscription.</p>
+      <section className="flex flex-col justify-around h-screen gap-10 px-5 py-7 text-dark-slate-grey">
+        <div className="flex flex-col justify-center h-full">
+          <div className="flex flex-col gap-7">
+            <Image
+              className="sm:hidden"
+              src={"/icons/icon-success.svg"}
+              alt="Illustration Image"
+              width={60}
+              height={60}
+            />
+            <h1 className="text-4xl font-bold">Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <span className="font-bold">ash@loremcompany.com.</span>{" "}
+              Please open it and click the button inside to confirm your subscription.</p>
+          </div>
         </div>
         <button
-          className="px-5 py-4 font-bold text-center text-white rounded-lg mt-60 bg-dark-slate-grey"
+          className="px-5 py-4 font-bold text-center text-white rounded-lg bg-dark-slate-grey"
           type="submit"
           onClick={() => setSubmitedStatus(false)}>Dismiss message</button>
       </section>
