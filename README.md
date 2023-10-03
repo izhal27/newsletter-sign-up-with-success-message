@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [link](https://www.frontendmentor.io)
-- Live Site URL: [link](https://www.frontendmentor.io)
+- Solution URL: [link](https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-Q9iIlNy5rx)
+- Live Site URL: [link](https://newsletter-sign-up-with-success-message-theta.vercel.app/)
 
 ### Built with
 
